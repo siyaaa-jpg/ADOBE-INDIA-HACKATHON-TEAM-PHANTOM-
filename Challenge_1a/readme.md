@@ -1,20 +1,20 @@
 # 📘 Challenge 1A: PDF Outline Extractor — Adobe India Hackathon 2025
 
-This solution extracts structured outlines (table of contents) from PDF documents and returns a clean, hierarchical JSON format as per Adobe's specifications.
+This project extracts structured outlines (table of contents) from PDF documents and returns a clean, hierarchical JSON output, as required by Adobe's challenge.
 
 ---
 
-## 🧠 Objective
+## 🎯 Objective
 
-Given a collection of PDFs, extract their hierarchical outline structures (bookmarks/TOC) and generate a structured `challenge1a_output.json` file.
+Extract the **bookmark/TOC structure** from a given set of PDFs and generate a structured `challenge1a_output.json` using Python and PyMuPDF.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python 3
-- [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/) (fitz)
-- Docker
+- 🔹 Python 3
+- 🔹 [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/en/latest/)
+- 🔹 Docker
 
 ---
 
@@ -22,25 +22,80 @@ Given a collection of PDFs, extract their hierarchical outline structures (bookm
 
 Challenge_1a/
 ├── Dockerfile
-├── process_pdfs.py
+├── process_outline.py
 ├── Collection1/
 │ ├── PDFs/
-│ │ └── <Your PDF files>
+│ │ ├── <Your PDFs go here>
 │ ├── challenge1a_input.json
-│ └── challenge1a_output.json (generated after running)
+│ └── challenge1a_output.json <-- (generated after run)
+
+yaml
+Copy
+Edit
+
+---
+
 ## 🚀 How to Run
 
-### 🔧 Step 1: Build Docker Image
+### 🧱 Step 1: Build Docker Image
 
 ```bash
 docker build -t pdf-outline-extractor -f Dockerfile .
+▶️ Step 2: Run the Extractor
+bash
+Copy
+Edit
 docker run --rm -v "${PWD}/Collection1:/app/Collection1" pdf-outline-extractor Collection1
-📦 Deliverables
-Dockerized code
+📌 Make sure:
 
-Input/output JSONs inside Collection1/
+All .pdf files are placed in Collection1/PDFs/
 
-Works across multiple PDFs
+challenge1a_input.json is present in Collection1/
 
-🧑‍💻 Developed By
-Team PHANTOM — Adobe India Hackathon 2025
+The output will be saved as challenge1a_output.json in the same folder
+
+📥 Input Format — challenge1a_input.json
+json
+Copy
+Edit
+{
+  "documents": [
+    { "filename": "example.pdf" },
+    { "filename": "sample2.pdf" }
+  ]
+}
+📤 Output Format — challenge1a_output.json
+json
+Copy
+Edit
+{
+  "outlines": [
+    {
+      "document": "example.pdf",
+      "outline": [
+        {
+          "title": "Chapter 1",
+          "page_number": 1,
+          "children": [
+            {
+              "title": "Section 1.1",
+              "page_number": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+✅ Deliverables
+ Dockerized solution
+
+ Input/output handling
+
+ Works with multiple PDFs
+
+ Clean and hierarchical output format
+
+👨‍💻 Developed By
+Team PHANTOM
+🔹 Adobe India Hackathon 2025
