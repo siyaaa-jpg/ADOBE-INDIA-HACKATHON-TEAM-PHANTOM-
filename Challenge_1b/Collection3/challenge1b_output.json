@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Breakfast Ideas.pdf",
+      "Lunch Ideas.pdf",
+      "Dinner Ideas - Mains_1.pdf",
+      "Dinner Ideas - Mains_2.pdf",
+      "Dinner Ideas - Mains_3.pdf",
+      "Dinner Ideas - Sides_1.pdf",
+      "Dinner Ideas - Sides_2.pdf",
+      "Dinner Ideas - Sides_3.pdf",
+      "Dinner Ideas - Sides_4.pdf"
+    ],
+    "persona": "Home cook",
+    "job_to_be_done": "Plan and prepare nutritious meals throughout the day",
+    "processing_timestamp": "2025-07-28T09:16:23.471951"
+  },
+  "extracted_sections": [
+    {
+      "document": "Breakfast Ideas.pdf",
+      "section_title": "•   Cook until bubbles form on the surface, then flip and cook until golden",
+      "importance_rank": 5,
+      "page_number": 2
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "•   Fold the parchment paper over the salmon and seal the edges to form a",
+      "importance_rank": 4,
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Sides_1.pdf",
+      "section_title": "o   Mix flour, oil, water, and salt to form a dough, then let rest.  o   Divide dough into balls",
+      "importance_rank": 4,
+      "page_number": 14
+    },
+    {
+      "document": "Dinner Ideas - Sides_2.pdf",
+      "section_title": "o   Mix flour, butter, water, and beaten egg to form a dough, then let rest.  o   Sauté ground",
+      "importance_rank": 4,
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "section_title": "o   Mix flour, oil, and water to form a dough, then let rest.  o   Boil and mash potatoes, then mix",
+      "importance_rank": 4,
+      "page_number": 13
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Breakfast Ideas.pdf",
+      "refined_text": "•   Cook until bubbles form on the surface, then flip and cook until golden",
+      "page_number": 2
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "•   Fold the parchment paper over the salmon and seal the edges to form a",
+      "page_number": 3
+    },
+    {
+      "document": "Dinner Ideas - Sides_1.pdf",
+      "refined_text": "o   Mix flour, oil, water, and salt to form a dough, then let rest.  o   Divide dough into balls",
+      "page_number": 14
+    },
+    {
+      "document": "Dinner Ideas - Sides_2.pdf",
+      "refined_text": "o   Mix flour, butter, water, and beaten egg to form a dough, then let rest.  o   Sauté ground",
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Sides_4.pdf",
+      "refined_text": "o   Mix flour, oil, and water to form a dough, then let rest.  o   Boil and mash potatoes, then mix",
+      "page_number": 13
+    }
+  ]
+}

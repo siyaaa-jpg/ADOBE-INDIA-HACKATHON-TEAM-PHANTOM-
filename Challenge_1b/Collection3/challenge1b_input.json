@@ -1,0 +1,19 @@
+{
+  "persona": {
+    "role": "Home cook"
+  },
+  "job_to_be_done": {
+    "task": "Plan and prepare nutritious meals throughout the day"
+  },
+  "documents": [
+    { "filename": "Breakfast Ideas.pdf" },
+    { "filename": "Lunch Ideas.pdf" },
+    { "filename": "Dinner Ideas - Mains_1.pdf" },
+    { "filename": "Dinner Ideas - Mains_2.pdf" },
+    { "filename": "Dinner Ideas - Mains_3.pdf" },
+    { "filename": "Dinner Ideas - Sides_1.pdf" },
+    { "filename": "Dinner Ideas - Sides_2.pdf" },
+    { "filename": "Dinner Ideas - Sides_3.pdf" },
+    { "filename": "Dinner Ideas - Sides_4.pdf" }
+  ]
+}
