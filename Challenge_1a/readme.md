@@ -1,101 +1,51 @@
-# 📘 Challenge 1A: PDF Outline Extractor — Adobe India Hackathon 2025
+# 📘 Challenge 1A: PDF Outline Extractor  
+*Adobe India Hackathon 2025 — Team PHANTOM*
 
-This project extracts structured outlines (table of contents) from PDF documents and returns a clean, hierarchical JSON output, as required by Adobe's challenge.
+This solution extracts structured outlines (table of contents) from PDF documents and returns a clean, hierarchical JSON format, as per Adobe’s specifications.
 
 ---
 
 ## 🎯 Objective
 
-Extract the **bookmark/TOC structure** from a given set of PDFs and generate a structured `challenge1a_output.json` using Python and PyMuPDF.
+Extract the hierarchical outline structure (bookmarks/TOC) from a given set of PDFs and generate a structured output in JSON.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
-- 🔹 Python 3
-- 🔹 [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/en/latest/)
-- 🔹 Docker
-
----
-
-## 📁 Folder Structure
-
-Challenge_1a/
-├── Dockerfile
-├── process_outline.py
-├── Collection1/
-│ ├── PDFs/
-│ │ ├── <Your PDFs go here>
-│ ├── challenge1a_input.json
-│ └── challenge1a_output.json <-- (generated after run)
-
-yaml
-Copy
-Edit
+- 🐍 Python 3  
+- 📚 [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/)  
+- 🐳 Docker  
 
 ---
 
-## 🚀 How to Run
+## ⚙️ How to Run
 
-### 🧱 Step 1: Build Docker Image
+### 🔨 Step 1: Build Docker Image
 
 ```bash
 docker build -t pdf-outline-extractor -f Dockerfile .
-▶️ Step 2: Run the Extractor
+🚀 Step 2: Run the Container
 bash
 Copy
 Edit
 docker run --rm -v "${PWD}/Collection1:/app/Collection1" pdf-outline-extractor Collection1
-📌 Make sure:
+✅ Ensure:
 
-All .pdf files are placed in Collection1/PDFs/
+PDFs are inside: Collection1/PDFs/
 
-challenge1a_input.json is present in Collection1/
+Input JSON: Collection1/challenge1a_input.json
 
-The output will be saved as challenge1a_output.json in the same folder
+Output JSON will be created as: Collection1/challenge1a_output.json
 
-📥 Input Format — challenge1a_input.json
-json
-Copy
-Edit
-{
-  "documents": [
-    { "filename": "example.pdf" },
-    { "filename": "sample2.pdf" }
-  ]
-}
-📤 Output Format — challenge1a_output.json
-json
-Copy
-Edit
-{
-  "outlines": [
-    {
-      "document": "example.pdf",
-      "outline": [
-        {
-          "title": "Chapter 1",
-          "page_number": 1,
-          "children": [
-            {
-              "title": "Section 1.1",
-              "page_number": 2
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-✅ Deliverables
- Dockerized solution
+📦 Deliverables
+Python script to extract PDF TOC
 
- Input/output handling
+Dockerized environment for consistency
 
- Works with multiple PDFs
+Structured and nested JSON output
 
- Clean and hierarchical output format
+Scalable to large document collections
 
 👨‍💻 Developed By
 Team PHANTOM
-🔹 Adobe India Hackathon 2025
