@@ -11,6 +11,25 @@ Extract the hierarchical outline structure (bookmarks/TOC) from a given set of P
 
 ---
 
+## 🧠 Methodology
+
+1. **PDF Parsing**:  
+   We used the `PyMuPDF` (fitz) library to access and parse each PDF file.
+
+2. **Outline Extraction**:  
+   The script attempts to extract existing outlines/bookmarks (if any) from each PDF. These outlines usually represent the document’s logical structure.
+
+3. **Hierarchy Handling**:  
+   The outline data is recursively traversed and structured into a nested JSON format, maintaining the parent-child relationship of headings.
+
+4. **Fallback Handling**:  
+   If a PDF lacks a built-in outline, the tool gracefully skips it, avoiding runtime crashes.
+
+5. **Automation & Scalability**:  
+   Docker is used to encapsulate the environment, ensuring consistency and easy scaling across systems.
+
+---
+
 ## 🧰 Tech Stack
 
 - 🐍 Python 3  
